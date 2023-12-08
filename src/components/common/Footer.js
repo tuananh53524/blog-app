@@ -74,6 +74,13 @@ const Footer = () => {
           </Col>
         </Row>
       </Container>
+      <Container fluid className="copyright-container">
+      <Row>
+        <Col>
+          <p className="text-center mt-2">&copy; 2023 Mon. All rights reserved.</p>
+        </Col>
+      </Row>
+    </Container>
     </footer>
   );
 };
