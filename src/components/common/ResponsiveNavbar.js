@@ -30,7 +30,7 @@ const ResponsiveNavbar = () => {
   };
 
   return (
-    <div>
+    <div className="sticky-top bg-white">
       <Container>
         <Navbar expanded={expanded} expand="lg" className="">
           <Navbar.Brand href="/">Mon.ne</Navbar.Brand>
@@ -40,19 +40,19 @@ const ResponsiveNavbar = () => {
           />
           <Navbar.Collapse
             id="responsive-navbar-nav"
-            className="justify-content-end gap-3"
+            className="justify-content-between"
           >
             <Nav className="mr-auto">
-              <Nav.Link href="/">Home</Nav.Link>
-              <Nav.Link href="/about">About</Nav.Link>
+              <Nav.Link href="/" className="animation-underline">Home</Nav.Link>
+              <Nav.Link href="/about" className="animation-underline">About</Nav.Link>
               {/* Add more Nav.Link components as needed */}
-              <NavDropdown title="Services" id="basic-nav-dropdown">
-                <NavDropdown.Item href="/service1">Service 1</NavDropdown.Item>
-                <NavDropdown.Item href="/service2">Service 2</NavDropdown.Item>
+              <NavDropdown title="Services" id="basic-nav-dropdown" className="animation-underline">
+                <NavDropdown.Item href="/service1" className="animation-underline">Service 1</NavDropdown.Item>
+                <NavDropdown.Item href="/service2" className="animation-underline">Service 2</NavDropdown.Item>
                 {/* Add more NavDropdown.Item components as needed */}
               </NavDropdown>
             </Nav>
-            <Nav className="gap-2">
+            <Nav className="gap-3 align-items-center">
               <div>
                 <a
                   href="https://www.facebook.com/"
@@ -89,8 +89,6 @@ const ResponsiveNavbar = () => {
                   <FontAwesomeIcon icon={faLinkedin} className="fs-5" />
                 </a>
               </div>
-            </Nav>
-            <Nav>
               <Button variant="outline-dark">Sign In</Button>
             </Nav>
             {/* <Button variant="outline-light" onClick={handleOffCanvasToggle}>
