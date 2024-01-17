@@ -1,4 +1,23 @@
 .main-title{
-    min-height: 500px;
+    padding: 20% 0;
     width: 100%;
+    background-image: url('../assets/images/background/background1.webp');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.two-title{
+    padding: 10% 0;
+    width: 100%;
+    background-image: url('../assets/images/background/two-title.webp');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.card-style{
+    width: 100%;
+    height: 100%;
 }

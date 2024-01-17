@@ -1,8 +1,9 @@
 // ResponsiveNavbar.js
 "use client";
 import React, { useState } from "react";
+import Link from 'next/link';
 import { Container, Navbar, Nav, NavDropdown, Button } from "react-bootstrap";
-import OffCanvasMenu from "./OffCanvasMenu"; // Import the OffCanvasMenu component
+import OffCanvasMenu from "./OffCanvasMenu.jsx"; // Import the OffCanvasMenu component
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
@@ -42,8 +43,9 @@ const ResponsiveNavbar = () => {
             id="responsive-navbar-nav"
             className="justify-content-between"
           >
-            <Nav className="mr-auto">
+            <Nav className="mr-auto gap-4">
               <Nav.Link href="/" className="animation-underline">Home</Nav.Link>
+              <Nav.Link href="/blog" className="animation-underline">Blog</Nav.Link>
               <Nav.Link href="/about" className="animation-underline">About</Nav.Link>
               {/* Add more Nav.Link components as needed */}
               <NavDropdown title="Services" id="basic-nav-dropdown" className="animation-underline">
@@ -51,6 +53,7 @@ const ResponsiveNavbar = () => {
                 <NavDropdown.Item href="/service2" className="animation-underline">Service 2</NavDropdown.Item>
                 {/* Add more NavDropdown.Item components as needed */}
               </NavDropdown>
+              <Nav.Link href="/album" className="animation-underline">Album</Nav.Link>
             </Nav>
             <Nav className="gap-3 align-items-center">
               <div>
@@ -89,11 +92,8 @@ const ResponsiveNavbar = () => {
                   <FontAwesomeIcon icon={faLinkedin} className="fs-5" />
                 </a>
               </div>
-              <Button variant="outline-dark">Sign In</Button>
+              <Button variant="outline-dark"><Link href="/login">Sign In</Link></Button>
             </Nav>
-            {/* <Button variant="outline-light" onClick={handleOffCanvasToggle}>
-            Menu
-          </Button> */}
           </Navbar.Collapse>
         </Navbar>
       </Container>
