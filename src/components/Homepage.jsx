@@ -1,6 +1,14 @@
 "use client";
 import "@/css/Home.css";
 import { Container, Button, Col, Row, Image, Card } from "react-bootstrap";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+// import required modules
+import { Autoplay } from "swiper/modules";
 
 const Homepage = () => {
   return (
@@ -66,12 +74,14 @@ const Homepage = () => {
                     Some quick example text to build on the card title and make
                     up the bulk of the card's content.
                   </Card.Text>
-                  <Card.Link href="#" className="link-under">Card Link</Card.Link>
+                  <Card.Link href="#" className="link-under">
+                    Card Link
+                  </Card.Link>
                 </Card.Body>
               </Card>
             </div>
             <div className="col-12 col-md-6 col-xl-3">
-            <Card className="card-style">
+              <Card className="card-style">
                 <Card.Img variant="top" src="/images/blog/blog-1.jpeg" />
                 <Card.Body>
                   <Card.Title>Card Title</Card.Title>
@@ -79,12 +89,14 @@ const Homepage = () => {
                     Some quick example text to build on the card title and make
                     up the bulk of the card's content.
                   </Card.Text>
-                  <Card.Link href="#" className="link-under">Card Link</Card.Link>
+                  <Card.Link href="#" className="link-under">
+                    Card Link
+                  </Card.Link>
                 </Card.Body>
               </Card>
             </div>
             <div className="col-12 col-md-6 col-xl-3">
-            <Card className="card-style">
+              <Card className="card-style">
                 <Card.Img variant="top" src="/images/blog/blog-3.jpeg" />
                 <Card.Body>
                   <Card.Title>Card Title</Card.Title>
@@ -92,12 +104,14 @@ const Homepage = () => {
                     Some quick example text to build on the card title and make
                     up the bulk of the card's content.
                   </Card.Text>
-                  <Card.Link href="#" className="link-under">Card Link</Card.Link>
+                  <Card.Link href="#" className="link-under">
+                    Card Link
+                  </Card.Link>
                 </Card.Body>
               </Card>
             </div>
             <div className="col-12 col-md-6 col-xl-3">
-            <Card className="card-style">
+              <Card className="card-style">
                 <Card.Img variant="top" src="/images/blog/blog-4.jpeg" />
                 <Card.Body>
                   <Card.Title>Card Title</Card.Title>
@@ -105,11 +119,131 @@ const Homepage = () => {
                     Some quick example text to build on the card title and make
                     up the bulk of the card's content.
                   </Card.Text>
-                  <Card.Link href="#" className="link-under">Card Link </Card.Link>
+                  <Card.Link href="#" className="link-under">
+                    Card Link{" "}
+                  </Card.Link>
                 </Card.Body>
               </Card>
             </div>
           </div>
+        </div>
+      </section>
+      <section className="three-title align-middle text-white fs-1 text-center fw-medium">
+        <blockquote data-animation-role="quote">
+          Life is a new journey and photos will capture your smile
+        </blockquote>
+      </section>
+      <section className="py-5 photos">
+      <div className="container text-center">
+          <div className="btn-outline-dark mx-auto p-3 btn fs-3">Photos</div>
+        </div>
+        <div className="container mt-5">
+          <Swiper
+            slidesPerView={3}
+            spaceBetween={30}
+            loop={true}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: true,
+            }}
+            breakpoints={{
+              0: {
+                slidesPerView: 1,
+                spaceBetween: 0,
+              },
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+              },
+            }}
+            modules={[Autoplay]}
+            className="mySwiper"
+          >
+            <SwiperSlide>              
+              <Card className="card-style">
+                <Card.Img variant="top" src="/images/blog/blog-2.jpeg" />
+                <Card.Body>
+                  <Card.Title>Card Title</Card.Title>
+                  <Card.Text>
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </Card.Text>
+                  <Card.Link href="#" className="link-under">
+                    Card Link
+                  </Card.Link>
+                </Card.Body>
+              </Card>
+              </SwiperSlide>
+
+              <SwiperSlide>              
+              <Card className="card-style">
+                <Card.Img variant="top" src="/images/blog/blog-2.jpeg" />
+                <Card.Body>
+                  <Card.Title>Card Title</Card.Title>
+                  <Card.Text>
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </Card.Text>
+                  <Card.Link href="#" className="link-under">
+                    Card Link
+                  </Card.Link>
+                </Card.Body>
+              </Card>
+              </SwiperSlide>
+
+              <SwiperSlide>              
+              <Card className="card-style">
+                <Card.Img variant="top" src="/images/blog/blog-2.jpeg" />
+                <Card.Body>
+                  <Card.Title>Card Title</Card.Title>
+                  <Card.Text>
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </Card.Text>
+                  <Card.Link href="#" className="link-under">
+                    Card Link
+                  </Card.Link>
+                </Card.Body>
+              </Card>
+              </SwiperSlide>
+
+              <SwiperSlide>              
+              <Card className="card-style">
+                <Card.Img variant="top" src="/images/blog/blog-2.jpeg" />
+                <Card.Body>
+                  <Card.Title>Card Title</Card.Title>
+                  <Card.Text>
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </Card.Text>
+                  <Card.Link href="#" className="link-under">
+                    Card Link
+                  </Card.Link>
+                </Card.Body>
+              </Card>
+              </SwiperSlide>
+
+              <SwiperSlide>              
+              <Card className="card-style">
+                <Card.Img variant="top" src="/images/blog/blog-2.jpeg" />
+                <Card.Body>
+                  <Card.Title>Card Title</Card.Title>
+                  <Card.Text>
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </Card.Text>
+                  <Card.Link href="#" className="link-under">
+                    Card Link
+                  </Card.Link>
+                </Card.Body>
+              </Card>
+              </SwiperSlide>
+
+          </Swiper>
         </div>
       </section>
     </>
